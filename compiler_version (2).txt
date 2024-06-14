@@ -5,4 +5,6 @@ $ sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev l
 To build the Newlib cross-compiler, pick an install path. If you choose, say, /opt/riscv, then add /opt/riscv/bin to your PATH now. Then, simply run the following command:
 
 ./configure --prefix=/opt/riscv --with-arch=rv32imfcxpulpv3 --with-abi=ilp32 --enable-multilib
-make
+
+make -j(number of cores of your pc)
+eg- if cores in pc = 6; make -j6
